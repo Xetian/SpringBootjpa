@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es"  xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template ::head"></head>
+<body>
+	<div class="container-fluid">
+		<header th:replace="plantilla/template ::header"></header>
+		
+		<main>
+			<div class="container my-3">
+				<h1 class="display-3">Asesorías : Bienvenido Admin</h1>
+
+				<br /> <br />
+				<div class="row align-items-center">
+
+
+					<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-6">
+
+						<h2 class="display-6">Solo debes llenar el formulario y agregaras un nuevo usuario</h2>
+						<br />
+
+
+						
+						<form class="row g-3" method="post" th:action="@{/guardarusu}" th:object="${usuario}">
+								<input type="hidden" name="id" th:field="*{id}">
+							<div class="col-md-6">
+								<label for="inputNombre" class="form-label">Nombre</label> <input
+									type="text" class="form-control" name="nombre" th:field="*{nombre}"  required
+									placeholder="Nombre Usuario">
+							</div>
+							<div class="col-md-6">
+								<label for="inputEmail" class="form-label">Email</label> <input
+									type="text" class="form-control" name="email" th:field="*{email}"required
+									placeholder="Correo electronico">
+							</div>
+							<div class="col-md-6">
+								<label for="inputClave" class="form-label">Clave</label> <input
+									type="text" class="form-control" name="clave" th:field="*{clave}"required
+									placeholder="Clave 1234">
+							</div>
+							
+								
+     							
+     							<div class="col-md-6">
+								<label for="inputTipo" class="form-label">Tipo de
+									Usuario</label> <select id="Usuario" name="tipo"th:field="*{tipo}"
+									class="form-select" aria-label="Default select example">
+									<option value="Cliente">Cliente</option>
+									<option value="Administrativo">Administrativo</option>
+									<option value="Profesional">Profesional</option>
+
+								</select>
+							</div>
+
+							<div>
+								
+								<br />
+								<button type="submit" class="btn btn-outline-primary">Actualizar / Agregar</button>
+							</div>
+
+						</form>
+						
+						
+					</div>
+
+					
+					
+					<br/>
+					
+					
+					
+
+				</div>
+
+			</div>
+			<br />
+			
+			
+		</main>
+
+		<footer th:replace="plantilla/template ::footer"></footer>
+	</div>
+	<!-- Link javasript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+</html>
