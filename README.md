@@ -49,3 +49,6 @@ definidoslostres perfiles que indica la plataforma, y aplicar losfiltros de acce
 el usuario conel cual se ingresó.
 
 SOLO DEBO AGREGAR QUE ESTE EJERCICIO NO ESTA COMPLETO Y ANIMO A CUALQUIER PROGRAMADOR EN JAVA SPRINGBOOT QUE QUIERA APOYAR, LO PUEDA DESARROLLAR.
+NOTA: Usuario : admin , Clave : admin1234
+La base de datos esta en MYSQL.
+
